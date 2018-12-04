@@ -1,0 +1,20 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.3.0/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.3.0/jasmine.css">
+
+<script src="jasmine/lib/jasmine-3.3.0/jasmine.js"></script>
+<script src="jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
+<script src="jasmine/lib/jasmine-3.3.0/boot.js"></script>
+<script>
+function pigLatin(str) {
+    str = str.split(' ').map(s => (s.slice(1) + s[0] + 'ay').toLowerCase()).join(' ');
+    return str[0].toUpperCase() + str.slice(1);
+}
+
+describe('pigLatin()', function() {
+  it('converts text to pig latin', function() {
+    expect(pigLatin('The quick brown fox')).toEqual('Hetay uickqay rownbay oxfay');
+  });
+});
+</script>
