@@ -1,0 +1,72 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.3.0/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.3.0/jasmine.css">
+
+<script src="jasmine/lib/jasmine-3.3.0/jasmine.js"></script>
+<script src="jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
+<script src="jasmine/lib/jasmine-3.3.0/boot.js"></script>
+<script>
+function translate_letter(s) {
+    return {
+        'a': '.-',
+        'b': '...',
+        'c': '-.-.',
+        'd': '-..',
+        'e': '.',
+        'f': '..-.',
+        'g': '--.',
+        'h': '....',
+        'i': '..',
+        'j': '.---',
+        'k': '-.-',
+        'l': '.-..',
+        'm': '--',
+        'n': '-.',
+        'o': '---',
+        'p': '.--.',
+        'q': '--.-',
+        'r': '.-.',
+        's': '...',
+        't': '-',
+        'u': '..-',
+        'v': '...-',
+        'w': '.--',
+        'x': '-..-',
+        'y': '-.--',
+        'z': '--..'
+    }[s];
+}
+
+describe('translate_letter()', function() {
+    it('translates letters to morse code', function() {
+        expect(translate_letter('a')).toEqual('.-');
+        expect(translate_letter('b')).toEqual('...');
+        expect(translate_letter('c')).toEqual('-.-.');
+        expect(translate_letter('d')).toEqual('-..');
+        expect(translate_letter('e')).toEqual('.');
+        expect(translate_letter('f')).toEqual('..-.');
+        expect(translate_letter('g')).toEqual('--.');
+        expect(translate_letter('h')).toEqual('....');
+        expect(translate_letter('i')).toEqual('..');
+        expect(translate_letter('j')).toEqual('.---');
+        expect(translate_letter('k')).toEqual('-.-');
+        expect(translate_letter('l')).toEqual('.-..');
+        expect(translate_letter('m')).toEqual('--');
+        expect(translate_letter('n')).toEqual('-.');
+        expect(translate_letter('o')).toEqual('---');
+        expect(translate_letter('p')).toEqual('.--.');
+        expect(translate_letter('q')).toEqual('--.-');
+        expect(translate_letter('r')).toEqual('.-.');
+        expect(translate_letter('s')).toEqual('...');
+        expect(translate_letter('t')).toEqual('-');
+        expect(translate_letter('u')).toEqual('..-');
+        expect(translate_letter('v')).toEqual('...-');
+        expect(translate_letter('w')).toEqual('.--');
+        expect(translate_letter('x')).toEqual('-..-');
+        expect(translate_letter('y')).toEqual('-.--');
+        expect(translate_letter('z')).toEqual('--..');
+    });
+});
+</script>
+</head>
