@@ -1,0 +1,21 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link rel="shortcut icon" type="image/png" href="jasmine/lib/jasmine-3.3.0/jasmine_favicon.png">
+<link rel="stylesheet" type="text/css" href="jasmine/lib/jasmine-3.3.0/jasmine.css">
+
+<script src="jasmine/lib/jasmine-3.3.0/jasmine.js"></script>
+<script src="jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
+<script src="jasmine/lib/jasmine-3.3.0/boot.js"></script>
+<script>
+function is_palindrome(str) {
+    return str === str.split('').reverse().join('');
+}
+
+describe('is_palindrome()', function() {
+    it('checks whether string is a palindrome', function() {
+        expect(is_palindrome('racecar')).toBe(true);
+        expect(is_palindrome('foo')).toBe(false);
+    });
+});
+</script>
+</head>
