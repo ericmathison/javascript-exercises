@@ -14,6 +14,7 @@ function is_palindrome(str) {
 describe('is_palindrome()', function() {
     it('checks whether string is a palindrome', function() {
         expect(is_palindrome('racecar')).toBe(true);
+        expect(is_palindrome('ana')).toBe(true);
         expect(is_palindrome('foo')).toBe(false);
     });
 });
