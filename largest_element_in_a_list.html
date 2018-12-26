@@ -7,7 +7,7 @@
 <script src="jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
 <script src="jasmine/lib/jasmine-3.3.0/boot.js"></script>
 <script>
-function largestElementInAList(arr) {
+largestElementInAList = arr => {
     let largest = arr[0];
     for(let i = 0; i < arr.length; i++) {
         if(arr[i] > largest) {
@@ -19,8 +19,8 @@ function largestElementInAList(arr) {
 
 
 
-describe("largestElementInAList()", function() {
-  it("It finds the largest element", function() {
+describe("largestElementInAList()", () => {
+  it("It finds the largest element", () => {
     expect(largestElementInAList([3, 6, 4, 2])).toEqual(6);
   });
 });
