@@ -7,7 +7,7 @@
 <script src="jasmine/lib/jasmine-3.3.0/jasmine-html.js"></script>
 <script src="jasmine/lib/jasmine-3.3.0/boot.js"></script>
 <script>
-function quicksort(arr) {
+quicksort = arr => {
     if (arr.length <= 2) {
         return arr[0] > arr[1] ? [arr[1], arr[0]] : arr;
     }
@@ -25,8 +25,8 @@ function quicksort(arr) {
     return (quicksort(smallerOrEqual) || []).concat((quicksort(larger) || []));
 }
 
-describe('quicksort()', function() {
-  function hasSameElementsAndOrder(arr1, arr2) {
+describe('quicksort()', () => {
+  hasSameElementsAndOrder = (arr1, arr2) => {
       for (let i = 0; i < arr1.length; i++) {
           if (arr1[i] !== arr2[i]) {
               return false;
@@ -38,7 +38,7 @@ describe('quicksort()', function() {
       return true;
   }
 
-  it('sorts a list of numbers', function() {
+  it('sorts a list of numbers', () => {
     expect(hasSameElementsAndOrder(quicksort([]), [])).toBe(true);
     expect(hasSameElementsAndOrder(quicksort([3, 6, 4, 2]), [2, 3, 4, 6])).toBe(true);
     expect(hasSameElementsAndOrder(quicksort([3]), [3])).toBe(true);
