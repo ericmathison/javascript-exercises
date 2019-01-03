@@ -37,11 +37,27 @@ whileLoopSum = arr => {
   return total;
 }
 
+recursionSum = arr => {
+  if(arr.length === 1) {
+    return arr[0];
+  }
+
+  let first = arr.shift();
+  let last = arr.pop();
+
+  let newFirstSum = first + last;
+
+  arr.unshift(newFirstSum);
+
+  return recursionSum(arr);
+}
+
 describe("sum methods", () => {
   it("adds elements in array", () => {
     arr = [3, 6, 4, 2];
     expect(forLoopSum(arr)).toEqual(15);
     expect(whileLoopSum(arr)).toEqual(15);
+    expect(recursionSum(arr)).toEqual(15);
   });
 });
 
